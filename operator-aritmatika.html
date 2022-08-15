@@ -9,17 +9,40 @@
 <body>
     <script>
 
-        let result = 1 + 2 ; //3
+        let result = 1 + 2 ; //==> 1 + 2 = 3; pertambahan
         document.writeln("<p> 1 + 2 = " + result + "</p>");
         let originalResult = result; // penampung nilai 3; 
 
-        result = result - 1 ; // 2
+        result = result - 1 ; // ==> 3 - 1 = 2; pengkurangan
         document.writeln("<p>" + originalResult + " - 1  = " + result + "</p>");
-        originalResult = result; // 2 dari hasil di atas, di tampung kembali .
+        originalResult = result; // ==> 2 dari hasil di atas, di tampung kembali .
         
-        result = result * 2 ; // 4
+        result = result * 2 ; // 2 * 2 = 4; perkalian 
         document.writeln("<p>" + originalResult + "  * 2  = " + result + "</p>");
+        originalResult = result;
 
+        result = result ** 2 ; // 4^2 = 16 ; perpangkatan
+        document.writeln("<p>" + originalResult + "  ** 2  = " + result + "</p>");
+        originalResult = result;
+
+        result = result / 2 ; // 8  ; Pembagian
+        document.writeln("<p>" + originalResult + "  / 2  = " + result + "</p>");
+        originalResult = result;
+
+        result = result % 3 ; // 8 % 3 = 2 ; Sisa Bagi
+        document.writeln("<p>" + originalResult + "  % 3  = " + result + "</p>");
+
+
+        /*
+        Keterangan : 
+        + = Pertambahan 
+        - = Perkurangan
+        * = Perkalian 
+        ** = Exponensial / perpangkatan
+        / = pembagian 
+        % = sisa bagi 
+        
+        */
     </script>
 </body>
 </html>
