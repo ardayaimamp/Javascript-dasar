@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>conversi string dan number</title>
+</head>
+<body>
+  <script>
+
+    const value1 = parseInt("1");
+    const value2 = 1;
+    const sum = value1 + value2;
+
+    document.writeln(`<p> ${sum} </p>`);
+
+    document.writeln(`<p>${parseInt("1.1")}</p>`); 
+    document.writeln(`<p>${parseFloat("1.1")}</p>`);
+    document.writeln(`<p>${Number("1.1")}</p>`);
+    
+    const a = 1;
+    const b = 7;
+    const total = a.toString() + b.toString(); //konversi dari number ke string!
+    
+    document.writeln(`<p> ${total} </p>`);
+
+
+    document.writeln(`<p>${parseInt("salah")}</p>`); //NaN
+    document.writeln(`<p>${parseFloat("1.1text")}</p>`); //1.1
+
+
+    //number() tidak ada akan mentolelir kesalahan pada data
+    document.writeln(`<p> ${Number("1.1ups")} </p>`); //NaN
+    document.writeln(`<p> ${Number("1x")} </p>`); //NaN
+    document.writeln(`<p> ${Number("bukan number")} </p>`); //NaN
+
+    const first = Number("salah"); //NaN
+    const totalNumber = first + 100;
+    document.writeln(`<p> ${totalNumber} </p>`); 
+
+    
+    document.writeln(`<p> ${isNaN(first)} </p>`); //NaN
+    document.writeln(`<p> ${isNaN(100)} </p>`); //NaN
+    document.writeln(`<p> ${isNaN(NaN)} </p>`); //NaN
+    
+
+
+    /*
+    
+    melakukan konversi string dan number;
+
+    **Function                  **keteratangan
+
+    parseInt(string)             mengkonversikan dari string ke number (bilangan bulat)
+    parseFloat(string)           mengkonversi dari string ke number (bilangan pecahan)
+    Number(string)               mengkonversi dari string ke number (bilangan bulat dan pecahan)
+    number.toString()            mengkonversi dari number ke string
+
+    ** NaN di konversi dengan data apapun akan hasilnya tetap NaN
+    ** funtion isNaN() mengecek apakah sebuah number itu NaN atau bukan,
+       hasil nya berupa boolean, True jika Nan || false jika bukan . 
+
+   
+    */
+
+  </script>
+</body>
+</html>
