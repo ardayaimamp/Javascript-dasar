@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tipe data array</title>
+</head>
+<body>
+  <script>
+
+    let arrayKosong = [];
+
+    let arrayNama = ["Ardaya", "Imam", "Pratama"];
+
+    //Menambahkan data array; Push    
+    const names = [];
+    names.push("Ardaya");
+    names.push("Imam", "Pratama");
+    names.push("budi", "joko", "rudi");
+
+    console.table(names);
+    
+    //=>mendapatkan data di posisi index
+    console.log(names[0]);
+
+    //=>mengubah data diposisi index;
+    names[3]= "Pabila";
+    console.table(names);
+    
+    //=> menghapus data di posisi index;
+    delete names[5];
+    console.table(names);
+
+    //=> ngepush index baru index[6]. mengubah index[5]. 
+    names[5]= "sayang utun";
+    names.push("Utun");
+    console.table(names);
+
+    //=> menambah array didalam array !
+    names.push(["papa sayang utun", "mama sayang utun"]);
+    console.table(names);
+    
+
+
+    /*
+    **Operasi di array
+
+    array.push(value)     =>  Menambah data array;
+    array.length          =>  untuk mendapatkan panjang array;
+    array[index]          =>  mendapatkan data diposisi index;
+    array[index]=value    =>  mengubah data diposisi index;
+    delete array[index]   =>  menghapus data diposisi index, namun index tidak menggeser;
+
+    **array tidak ada batas data apapun, bahkan kita dapat memasukan arrray ke dalam array jika mau.
+
+    */
+
+  </script>
+</body>
+</html>
