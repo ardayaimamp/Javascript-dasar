@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tipe data object</title>
+</head>
+<body>
+  
+    <script>
+      
+      //memasukan langsung ke propertis/attribute;
+      const fullname = {
+        firstName : "Ardaya",
+        middleName : "Imam",
+        lastName : "Pratama",
+        "siapa aku" : "gatau"
+      };
+
+      console.table(fullname);
+
+
+      const person ={};
+      
+      //ubah atau menambah : Properti/ attribute
+      person["nama"] = "ardaya imam pratama";
+      person["alamat"] = "Perum surya cigadung";
+      person["umur"] = 27;
+
+      console.table(person);
+
+
+      console.info(`nama : ${person.nama}` );
+      console.info(`alamat : ${person.alamat}` );
+      console.info(`umur : ${person.umur}` );
+
+      
+      //menghapus property/ attribute;
+      delete person["umur"];
+      console.table(person);
+
+
+      
+    </script>
+
+</body>
+</html>
