@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operator In</title>
+</head>
+<body>
+  <script> 
+  
+    const person = {
+      firstName : "Ardaya Imam",
+      lastNamer : "Pratama"
+    }
+
+    if ("firstName" in person ){
+      alert (`hellow ${person.firstName}`)
+    }else {
+      alert (`tidak ada`)
+    }
+
+
+    const student = {
+      firstName : "ardaya",
+      middleName : undefined,
+      lastNamer : "pratama"
+    }
+
+    if ("middleName" in student){
+      alert (`hellow ${student.middleName}`);
+
+    } else {
+      alert (`Hellow students`);
+
+    }
+
+    const names = [null, "imam", null];
+    const result = 0 in names;
+    document.writeln(`<p>${result}</p>`);
+
+
+    /* in operator hanya mengecek isi propety atau index nya nya.. dia tidak mengecek value nya apa
+
+    */
+
+  </script>
+</body>
+</html>
