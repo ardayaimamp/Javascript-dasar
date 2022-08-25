@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>operator nullish coalesing</title>
+</head>
+<body>
+  <script>
+    
+    //untuk pengecekan data undefined atau null menggunakan nullish coalesing .!  
+
+    let parameter;
+
+
+    //menggunakan if tanpa nullish coalesing. || untuk mencari nilai default undefined atau null
+    let data = parameter;
+    if (data === undefined || data === null) {
+      data = "nilai Default (mengunnakan if statement)";
+    }
+    
+    document.writeln(`<p> ${data} </p>`);
+
+
+
+    //menggnakann nullish coalesing. ||untuk mencari nilai default undefined atau null
+    data = parameter ?? "Nilai Default (menggunakan nullish coalesing)";
+
+    document.writeln(`<p> ${data} </p>`);
+    
+
+
+  </script>
+</body>
+</html>
