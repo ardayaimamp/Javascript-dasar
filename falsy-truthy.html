@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>falsy dan truthy</title>
+</head>
+<body>
+  <script>
+
+    const data = "";
+
+    if (data) {
+      document.writeln("True");
+    } else {
+      document.writeln("False");
+      
+    }
+
+
+    const data1 = "flase";
+
+    if (data1) {
+      document.writeln("True");
+    } else {
+      document.writeln("False");
+      
+    }
+
+
+    const data2 = 0;
+
+    if (data2) {
+      document.writeln("True");
+    } else {
+      document.writeln("False");
+      
+    }
+
+
+    const data3 = -5;
+
+    if (data3) {
+      document.writeln("True");
+    } else {
+      document.writeln("False");
+      
+    }
+
+
+    const data4 = [];
+
+    if (data4) {
+      document.writeln("True");
+    } else {
+      document.writeln("False");
+      
+    }
+
+
+    const data5 = {};
+
+    if (data5) {
+      document.writeln("True");
+    } else {
+      document.writeln("False");
+      
+    }
+
+    const data6 = null;
+
+    if (data6) {
+      document.writeln("True");
+    } else {
+      document.writeln("False");
+      
+    }
+
+
+    const data7 = undefined;
+
+    if (data7) {
+      document.writeln("True");
+    } else {
+      document.writeln("False");
+      
+    }
+
+
+
+    /* #Data Falsy 
+
+    data dianggap falsy ||  Keterangan
+
+    false                     Boolean false
+    0,-0                      Number 0 dan -0 dianggap false
+    "",'',``                  Semua string kosong dianggap false
+    null                      null dianggap false
+    undifined                 undefined dianggap false
+    NaN                        Not a Number di anggap false
+
+      #data Truthy
+
+      -Truthy ada;ah kebalikan dari falsy, dimana data nya dianggap bernilai true;
+      -sederhananya data bukan bernilai falsy adalah bernilai truthy;
+
+    */
+
+  </script>
+</body>
+</html>
