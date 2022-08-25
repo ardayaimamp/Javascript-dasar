@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>operator logika di non boolean </title>
+</head>
+<body>
+  <script>
+  /*
+  -Operator logika OR(||), membaca dari kiri ke kanan.
+  -Operator ini akan mengambil nilai pertama yang thruty.
+  -jika tidak ada satupun yang bernilai truthy, maka yang di ambil yang terakhir.
+  
+  
+  */
+    // hello (truthy) dan "" (falsy) = hasilnya hello
+    console.info("hello" || "");
+
+    // "" falsy dan [] (truthy) = hasilnya []
+    console.info("" || []);
+
+    // "0" (truthy) dan "NOL" (truthy) = hasilnya "0", di ambil yang pertama truty apabila keduanya truthy .
+    console.info("0" || "NOL");
+
+    // 0 (flasy) dan "NOl" (truthy) = hasilnya "NOL"
+    console.info(0 || "NOL");
+
+    // null (falsy) dan "Null" (truthy) = hasilnya "Null"
+    console.info(null || "Null");
+    
+    // undefined (falsy) dan "undefined" (truthy) = hasilnya "Null"
+    console.info(undefined || "undefined");
+    
+    // undefined (falsy) dan null (falsy) = hasilnya null. di ambil flasy terakhir apabila keduanya falsy;
+    console.info(undefined || null);
+
+
+    // ini adalah contoh kasus penggunaaan operator logika OR
+    const person = {
+      firstName : "ardaya",
+      lastName : "Pratama"
+    };
+    
+    const name = person.firstName || person.lastName;
+    console.info(name);
+    
+    //---------------------------------------------------------------------------------------------------
+    
+    
+    /*
+    -Operator logika AND(&&), membaca dari kiri ke kanan.
+    -Operator ini akan mengambil nilai pertama yang FALSY.
+    -jika tidak ada satupun yang bernilai FALSY, maka yang di ambil yang terakhir.
+    
+    
+    */
+   // hello (truthy) dan "" (falsy) = hasilnya " "
+   console.info("hello" && "");
+   
+   // "" falsy dan [] (truthy) = hasilnya " "
+   console.info("" && []);
+   
+   // "0" (truthy) dan "NOL" (truthy) = hasilnya "NOL",jika tidak ada falsy maka di ambil yang truthy terakhir.
+   console.info("0" && "NOL");
+   
+   // 0 (flasy) dan "NOl" (truthy) = hasilnya "0"
+   console.info(0 && "NOL");
+   
+   // null (falsy) dan "Null" (truthy) = hasilnya null
+   console.info(null && "Null");
+   
+   // undefined (falsy) dan "undefined" (truthy) = hasilnya undefined
+   console.info(undefined && "undefined");
+   
+   // undefined (falsy) dan null (falsy) = hasilnya underfined. di ambil flasy pertama apabila keduanya falsy;
+   console.info(undefined && null);
+   
+
+
+
+   // ini adalah contoh kasus penggunaaan operator logika AND
+   const human = {
+     firstName : "ardaya",
+     lastName : null
+   };
+   
+   const nama = human.firstName && human.lastName;
+   console.info(nama);
+   
+      </script>
+</body>
+</html>
+    
