@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optional Chaining</title>
+</head>
+<body>
+  <script>
+
+    const person = {
+      addres: {
+        country: "Indonesia"
+      }
+
+    };
+
+
+    let country = person?.addres?.country;
+
+
+    document.writeln(`<p>${country}</p>`);
+
+    // #OPTIONAL CHAINING MENGGUNAKAN '?'
+
+
+
+
+   /* ## pengecekan menggunakan IF
+   
+   let country ;
+
+     if (person.address !== undefined && person.address !== null){
+       country = person.address.country;
+     }
+
+     document.writeln(`<p>${country}</p>`);
+
+     */
+
+  </script>
+</body>
+</html>
