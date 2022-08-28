@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do While Loop</title>
+</head>
+<body>
+  <script>
+
+    /*
+    
+    -do while loop adalah perulangan yang mirip dengan while loop
+    -perbedaanya hanya pada pengecekan kondisi
+    -pengecekan do while loop dilakukan setelah perulangan dilakukan
+    -oleh karna itu  dalam do while loop,
+    minimal pasti perulangan dilakukan walaupun kondisinya tidak bernilai true (bernilai false)
+
+    */
+
+    //kondisi true
+    let counter = 1;
+    do {
+      document.writeln(`<p>perulangan ke ${counter}</p>`);
+      counter++
+    }
+     while (counter <=10);
+
+
+
+
+     //KONDISI FALSE
+     //walau kondisi nya false, tetapi dia tetap melakukan perulangan sekali .
+
+     let nilai = 100;
+     do {
+       document.writeln(`<p>perulangan ke ${nilai}</p>`);
+       nilai++
+     }
+      while (nilai <=10);
+     
+  </script>
+</body>
+</html>
