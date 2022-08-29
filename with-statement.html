@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>With Statement</title>
+</head>
+<body>
+  <script>
+    //disini ada object person dengan property : firstName, middleName, lastName
+  const person = {
+
+    firstName : "Ardaya",
+    middleName : "Imam",
+    lastName : "Pratama"
+
+  };
+  
+  //tanpa menggunakan with statement
+  console.log(person.firstName);
+  console.log(person.middleName);
+  console.log(person.lastName);
+  
+  //Menggunakan With Statement
+  with (person) {
+  console.log(firstName);
+  console.log(middleName);
+  console.log(lastName);
+  };
+
+  /*
+  -walaupun fitur with statement ini sangat menarik
+  -namun kebanyakan orang tidak merekomendasikan penggunaan with statement
+  -hal ini dikarenakan with statement kadang membuat orang menjadi ambigu
+  */
+
+  </script>
+</body>
+</html>
