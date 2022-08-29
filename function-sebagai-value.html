@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function sebagai value</title>
+</head>
+<body>
+  <script>
+
+    /*#function sebagai value
+      -function tidak hanya bisa digunakan sebagai kode pemograman yang di eksekusi, tapi bisa juga sebagai value
+      -artinya, function bisa disimpan di variable, bisa juga di kirim melalui parameter ke function lainnya
+    */
+
+    //Function sebagai value!
+    function sayHello(name) {
+      document.writeln(`<p>hello ${name}</p>`);
+
+    }
+
+    //cara pertama pemanggilan function
+    sayHello("Ardaya");
+
+    const say = sayHello;// <== nilai function ini di jadikan varibale value. 
+    //dan bisa pemanggilan menggunakan varibale seperti di bawah
+
+    //cara kedua pemanggilan function, menggunakan variable.  
+    say("Budi"); // <==pemanggilan varibale value sebagai pengganti pemanggilan function
+
+  </script>
+</body>
+</html>
