@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Label</title>
+</head>
+<body>
+  <script>
+
+    /*
+      -label merupakan penanda yang bisa digunakan dengan kata kunci break dan continue
+      -dengan mengunakan label, kita bisa melakukan break dan continue terhadap perulangan yang kita inginkan, asalkan pada perulangan kita gunakan label.
+      -untuk membuat label, kita bisa gunakan nama label lalu di ikuti dengan : (titik dua);
+    
+    
+    */
+
+    loopi:
+      for (let i  = 0; i < 10; i++) {
+          
+        loopj:
+          for (let j = 0; j < 100; j++) {
+            
+            if (j > 10 ) {
+              continue loopi;
+            }
+
+            document.writeln(`<p>${i} - ${j}</p>`);
+          }
+          
+      }
+
+  </script>
+</body>
+</html>
