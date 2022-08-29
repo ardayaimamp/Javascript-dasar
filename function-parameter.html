@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Parameter</title>
+</head>
+<body>
+  <script>
+
+    /*
+    -kita bisa mengirim informasi ke functionyang ingin kita pangil
+    -untuk melakukan hal tersebut, kita perlumenambahkan parameter atau argument di function yg sudah kita buat
+    -parameter ditempatkan di dalam kurung () di deklarasi method
+    -paramteter bisa lebih dari satu, jika lebih dari satu, harus menggunakan tanda koma
+    */
+
+    //membuat function dengan parameter
+    function sayHello(firstName, lastName){
+      document.writeln(`<p>${firstName} ${lastName}</p>`)
+    }
+
+    //memanggil function dengan parameter
+    sayHello("Ardaya", "Pratama");
+    sayHello("Eko", "Budiana");
+
+  </script>
+</body>
+</html>
