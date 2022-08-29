@@ -29,6 +29,17 @@
     //cara kedua pemanggilan function, menggunakan variable.  
     say("Budi"); // <==pemanggilan varibale value sebagai pengganti pemanggilan function
 
+
+    //cara ketiga
+    //mengirim parameter dari function lainnnya 
+    function giveMeName(callback) {
+      callback("Pratama");
+    }
+
+    giveMeName(sayHello);
+    giveMeName(say);
+    
+
   </script>
 </body>
 </html>
