@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scope</title>
+</head>
+<body>
+  <script>
+    /* #scope
+    -Scope merupakan area akses sebua data
+    -ada 2 jenis scope, global scope dan local scope
+    -setiap kita membuat function, maka akan membuat local scope untuk function tersebut
+    -data di global scope bisa di akses dari local scope, namun data di local scope hanya bisa di akses di local scope tersebut,
+     atau di scope local dibawahnya(dalam kasus function didalam function);
+    */
+
+    //------------------Nested Function Scope---------------//
+    //Function di dalam Function
+
+    function mouse() {
+      //local scope first mouse
+      let firstMouse = "Mouses";
+
+      function dog(){
+        //local scope dog()
+        console.info(firstMouse); //dapat akses ke local scope mouse()
+
+        const cat = "test cats";
+      }
+
+      dog();
+      // console.info(cat); <= ini akan terjadi error, karna bukan local scope nya . melainkan ini sudah ada di posisi local scope mouse; 
+    }
+    mouse();
+
+
+
+    //-------contoh global scope---------------------------------//
+
+    //global scope
+    let counter = 0;//varible counter berada di global scope, artinya variable ini bisa di panggil di global scope.
+
+    //hitMe adalah global scope
+    function hitMe(){
+      //local scope hitMe
+      counter++;
+    }
+
+    function other(){
+      //local scope other
+    }
+
+    hitMe();
+    hitMe();
+
+    console.info(counter);
+
+
+    //---------contoh local scope-------------------------------//
+    function first(){
+      //local scope first
+      let firstVariable = "first"; // variable di dalam funtion, artinya variable firstVariable ini adalah local scope;
+
+      console.info(firstVariable); //ini penempatan pemanggilan variable local scope yang benar. 
+    }
+    
+    function second(){
+      //local scope second
+      let secondVariable = "second";
+    }
+
+    first();
+    second();
+
+    //posisi nya di global scrope, tidak bisa di akses dan akan error. harus di simpan di bagian local scope function masing2
+    console.info(firstVariable); //Error
+    console.info(secondVariable); //Error
+
+
+
+
+  </script>
+</body>
+</html>
