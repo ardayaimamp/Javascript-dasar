@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Method</title>
+</head>
+<body>
+  <script>
+  /* #Object method
+  - pada tipe data object, kita  sudah membahas tentang property di object
+  - karena sebenernya function juga merupakan salah satu tipe data, 
+    jadi function pun sebenernya bisa kita tambahkan sebgai property di object
+  - cara pembuatan pun sama dengan function value
+  - function di object kadang disebut juga sebagai Object Method
+  */
+
+  //cara pertama!
+  //membuat object dengan method
+  //anonympus function
+  const person = {
+    name : "Ardaya",
+    sayHello : function (name) {
+      document.writeln(`<p>Hello ${name}</p>`);
+    }
+  };
+  
+  person.sayHello("Imam");
+  
+  
+  //cara kedua
+  //function
+  function hello(nama){
+    document.writeln(`<p>Hello ${nama}</p>`);
+    
+  }
+
+  const data = {
+    nama : "Pratama",
+    hello : hello
+  };
+
+  data.hello("Ardaya Imam Pratama");
+
+
+  //Menambah method ke object | function yang ada didalam method
+  const personal = {
+    name : "alvaro"
+  };
+
+  personal.giveName = function(name){
+    document.writeln(`<p>Hello ${name}</p>`);
+    
+  }
+
+  personal.giveName("Zayyan");
+     
+
+  </script>
+</body>
+</html>
