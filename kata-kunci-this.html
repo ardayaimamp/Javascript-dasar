@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kata kunci this</title>
+</head>
+<body>
+  <script>
+    /* Kata kunci this
+    - kata kunci this adalah referensi ke object milik siapa
+    - tiap lokasi kata kunci this, bisa berbeda beda referensi pemiliknya
+    - dalam object method, this merupakan referensi ke object pemilik function nya.
+    
+    */
+
+    //global
+    console.info(this); //<= window
+    
+    // di dalam function
+    function sample(){
+      console.info(this);//<= window
+      
+      //nested function
+      function inner() {
+        console.info(this);//<= window
+        
+      }
+      inner();
+    }
+    sample();
+
+
+    //this di Object method
+    const person = {
+    name : "Ardaya",
+    sayHello : function (value) {
+      console.info(`Hello ${value}, my name is ${this.name}`);//<= this jadi pemilik object pemilik function
+    }
+  };
+  
+  person.sayHello("Imam");
+
+  </script>
+</body>
+</html>
