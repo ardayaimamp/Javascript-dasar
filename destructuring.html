@@ -33,7 +33,7 @@
     console.info(first);
     console.info(middle);
     console.info(last);
-    console.info(others);
+    console.table(others);
     }
 
 
@@ -61,9 +61,133 @@
     const {firstName, lastName, addres, ...others} = person;
     console.info(firstName);
     console.info(lastName);
-    console.info(addres);
-    console.info(others);
+    console.table(addres);
+    console.table(others);
+
+        /*
+          - akses object person di atas. tapi ini di komentar karna status nya pasti undefined
+        - mengmabil data menggunakan destrcuturing nested object
+        */
+
+    // const {firstName, lastName, addres : {country, city, street}, ...others} = person;
+    // console.info(firstName);
+    // console.info(lastName);
+    // console.info(country);
+    // console.info(city);
+    // console.info(street);
+    // console.table(others);
+
+   }
+
+   /* Destructuring Function Parameter
+   - Destructuring tidak hanya bisa dilakukan di variable, tapi juga bisa dilakukan di function parameter
+   - hal ini membuat kita mudah ketika ingin mengambil nested data dalam array atau object dalam function
+   */
+
+
+  {
+      /*  
+      //fuction parameters object tanpa destruction
+      
+      function displayPerson(person){
+        console.info(person.firstName);
+        console.info(person.middleName);
+        console.info(person.lastName);
+      }
+      */
+     
+      //destruction di function parameters (1) object
+     function displayPerson({firstName, middleName,lastName}){
+       console.info(firstName);
+       console.info(middleName);
+       console.info(lastName);
+     }
+
+      const person = {
+        firstName : "Ardaya",
+        middleName : "Imam",
+        lastName : "Pratama",
+      };
+
+      displayPerson(person);
     }
+
+    {
+        /*
+        // funtion parameters array tanpa destruction
+      function sum(array) {
+        return array[0] + array [1];
+
+      }
+      */
+        // destructuin di function parameters (2) array
+       function sum([first, second]) {
+         return first + second;
+ 
+       }
+
+      console.info(sum([1,1]));
+      console.info(sum([10,10]));
+
+    }
+
+    {
+      /* Default Value pada destructuring
+      - kita bisa menambahkan  default value
+      - jadi misalkan kita melakukan destructuring terhadap array, ternyata tidak ada datanya,
+         maka kita bisa menambah default value
+      - begitu juga pada object, jika ternyata property nya tidak ada, maka kita bisa menambahahkan default value
+      */
+
+      //default value Destructuring Array
+      const names = ["Alvaro", "karim"];
+      const [firstName, middleName, lastName = "Pratama"] = names;
+
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
+      
+    }
+    
+    {
+      
+      //default value Destructuring Object
+      const person = {
+        firstName : "Pabila",
+        lastName : "Pabs"
+      };
+      
+      const {firstName, middleName = "Hayoooo", lastName} = person;
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
+
+    }    
+
+    { 
+      /* Menggunakan Nama Variable lain
+      - saat melakukan destructuring di array, kita bisa dengan mudah membuat nama variable sesuka kita
+      - namun pada saat melakukan destructuring, kita harus membuat nama variable sama dengan nama property
+      - kita juga bisa menggunakan nama varible lain saat melakukan destructuring object jika kita mau
+      */
+
+      const person = {
+        firstName : "ananda",
+        middleName : "salsabilah",
+      }
+
+      let {
+        firstName : namaDepan,
+        middleName : namaTengah,
+        lastName : namaBelakang = "Gunawan" } = person
+
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+
+
+    }
+    
 
     
   </script>
